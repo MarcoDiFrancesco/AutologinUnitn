@@ -1,56 +1,55 @@
-function login() {
-  // Check only if we are in this page
-  if (window.location.href !== "https://webapps.unitn.it/gestionecorsi/") {
-    return;
-  }
-  login_url = "https://webapps.unitn.it/GestioneCorsi/IndexAuth";
-  var links = document.getElementsByTagName("a");
-  for (var i = 0, max = links.length; i < max; i++) {
-    // If link to login page is detected
-    if (links[i].href === login_url) {
-      // Go to login page
-      window.location.replace(login_url);
-      return;
+const url = window.location.href;
+
+if (url === "https://webapps.unitn.it/gestionecorsi/") {
+  const links = document.getElementsByTagName("a");
+  for (const link of links) {
+    const text = link.textContent;
+    if (text === "Login") {
+      window.location.replace(
+        "https://webapps.unitn.it/GestioneCorsi/IndexAuth"
+      );
     }
   }
 }
 
-function login_2() {
-  // If url is not matching return
-  if (!window.location.href.includes("https://didatticaonline.unitn.it/dol/")) {
-    return;
-  }
-  login_url = "https://didatticaonline.unitn.it/dol/login/index.php";
-  var links = document.getElementsByTagName("div");
-  for (var i = 0, max = links.length; i < max; i++) {
-    if (
-      links[i].textContent ===
-      "Guests cannot access this course. Please log in."
-    ) {
-      window.location.replace(login_url);
-      return;
+if (url === "https://didatticaonline.unitn.it/dol/") {
+  const spans = document.getElementsByTagName("span");
+  for (const link of spans) {
+    const text = link.textContent;
+    if (text.includes("You are not logged in")) {
+      window.location.replace(
+        "https://didatticaonline.unitn.it/dol/loginUniTN.php"
+      );
     }
   }
-  login_url = "https://didatticaonline.unitn.it/dol/auth/shibboleth/index.php";
-  var links = document.getElementsByTagName("b");
-  for (var i = 0, max = links.length; i < max; i++) {
-    if (links[i].textContent === "Se hai un account @unitn.it") {
-      window.location.replace(login_url);
-      return;
+} else if (url.includes("https://didatticaonline.unitn.it/dol/")) {
+  // Example: https://didatticaonline.unitn.it/dol/enrol/index.php?id=29973
+  let links = document.getElementsByTagName("div");
+  for (const link of links) {
+    const text = link.textContent;
+    if (text.includes("Guests cannot access this course. Please log in.")) {
+      window.location.replace(
+        "https://didatticaonline.unitn.it/dol/login/index.php"
+      );
     }
   }
 }
 
-function login_3() {
-  if (!window.location.href.includes("https://idp.unitn.it/idp/")) {
-    return;
-  }
-  document.getElementById("clid").value = user_email;
-  document.getElementById("inputPassword").value = user_password;
-  document.getElementById("btnAccedi").click();
-  return;
+if (url === "https://didatticaonline.unitn.it/dol/loginUniTN.php") {
+  window.location.replace(
+    "https://didatticaonline.unitn.it/dol/auth/shibboleth/index.php"
+  );
 }
 
-login();
-login_2();
-login_3();
+if (url === "https://www.esse3.unitn.it/Home.do") {
+  window.location.replace(
+    "https://www.esse3.unitn.it/auth/Logon.do"
+  );
+}
+
+// TODO: get credentials somehow
+// if (window.location.href.includes("https://idp.unitn.it/idp/")) {
+//   // document.getElementById("clid").value = user_email;
+//   // document.getElementById("inputPassword").value = user_password;
+//   document.getElementById("btnAccedi").click();
+// }
