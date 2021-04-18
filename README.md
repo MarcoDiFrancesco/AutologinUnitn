@@ -27,3 +27,14 @@ Just to be clear if it isn't obvious enogh from the code: this extension **does 
 ![https://i.imgur.com/XvhGv6t.png](https://i.imgur.com/XvhGv6t.png)
 
 Enjoy!
+
+## Chrome store?
+
+<details>
+<summary>Nope</summary>
+
+Rejected because impersonates a user :disappointed:
+
+![https://i.imgur.com/x38qPW1.png](https://i.imgur.com/x38qPW1.png)
+
+</details>
