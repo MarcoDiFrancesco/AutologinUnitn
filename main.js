@@ -1,3 +1,8 @@
+// example@unitn.it
+const email = "";
+// password
+const password = "";
+
 const url = window.location.href;
 
 if (url === "https://webapps.unitn.it/gestionecorsi/") {
@@ -42,14 +47,13 @@ if (url === "https://didatticaonline.unitn.it/dol/loginUniTN.php") {
 }
 
 if (url === "https://www.esse3.unitn.it/Home.do") {
-  window.location.replace(
-    "https://www.esse3.unitn.it/auth/Logon.do"
-  );
+  window.location.replace("https://www.esse3.unitn.it/auth/Logon.do");
 }
 
-// TODO: get credentials somehow
-// if (window.location.href.includes("https://idp.unitn.it/idp/")) {
-//   // document.getElementById("clid").value = user_email;
-//   // document.getElementById("inputPassword").value = user_password;
-//   document.getElementById("btnAccedi").click();
-// }
+if (window.location.href.includes("https://idp.unitn.it/idp/")) {
+  if (email && password) {
+    document.getElementById("clid").value = email;
+    document.getElementById("inputPassword").value = password;
+    document.getElementById("btnAccedi").click();
+  }
+}

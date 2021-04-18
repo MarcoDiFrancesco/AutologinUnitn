@@ -1,22 +1,29 @@
-# Skip Login Pages Unitn
+# Autologin Unitn
 
 Avoid clicking contuously the Login buttons in unitn website.
 
 Just to be clear if it isn't obvious enogh from the code: this extension **does not gather any data in any way**.
 
-TODO: Chrome store link
-
 ## Example
 
 ![https://i.imgur.com/0tMq2Ad.gif](https://i.imgur.com/0tMq2Ad.gif)
 
-## What happens in the login page?
+## Setup
 
-<details>
-<summary>Nothing</summary>
+- Clone repository
 
-As of 2021 in Chrome it's not possible to click the login button once Chrome autofills credentials. You need to click the login button by yourself:
+- *Optional: add university email and password in main.js*
 
-![https://i.imgur.com/vNSpFLj.gif](https://i.imgur.com/vNSpFLj.gif)
+- Go to [chrome://extensions](chrome://extensions)
 
-</details>
+- Enable *Developer mode*:  
+![https://i.imgur.com/veegk1W.png](https://i.imgur.com/veegk1W.png)
+
+- Select *Load unpacked*
+
+- Select directory *Autologin Unitn*
+
+- Extension should appear:  
+![https://i.imgur.com/XvhGv6t.png](https://i.imgur.com/XvhGv6t.png)
+
+Enjoy!
