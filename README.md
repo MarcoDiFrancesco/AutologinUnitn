@@ -1,8 +1,8 @@
 # Autologin Unitn
 
-Avoid clicking contuously the Login buttons in unitn website.
+Avoid contuously clicking login buttons in unitn website.
 
-Just to be clear if it isn't obvious enogh from the code: this extension **does not gather any data in any way**.
+*Just to be clear if it isn't obvious enogh from the code: this extension **does not gather any data in any way**.*
 
 ## Example
 
