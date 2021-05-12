@@ -40,7 +40,7 @@ if (url === "https://didatticaonline.unitn.it/dol/") {
   }
 }
 
-if (url === "https://didatticaonline.unitn.it/dol/loginUniTN.php") {
+if (url === "https://didatticaonline.unitn.it/dol/loginUniTN.php" || url === "https://didatticaonline.unitn.it/dol/loginUniTN.php?errorcode=4") {
   window.location.replace(
     "https://didatticaonline.unitn.it/dol/auth/shibboleth/index.php"
   );
