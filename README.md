@@ -1,6 +1,6 @@
 # Autologin Unitn
 
-Avoid contuously clicking login buttons in unitn website.
+Skip login pages on unitn.it
 
 *Just to be clear if it isn't obvious enogh from the code: this extension **does not gather any data in any way**.*
 
