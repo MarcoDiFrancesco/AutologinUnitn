@@ -2,7 +2,7 @@
 	"name": "Skip Login Pages Unitn",
 	"version": "1",
 	"description": "Avoid clicking the continue buttons in the website",
-	"manifest_version": 3,
+	"manifest_version": 2,
 	"content_scripts": [
 		{
 			"matches": [
